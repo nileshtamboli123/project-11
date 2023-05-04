@@ -6,7 +6,7 @@
     String lastName = request.getParameter("lastName");
     String email = request.getParameter("email");
     Class.forName("com.mysql.cj.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://database-11.cvk9sw9zkgik.us-east-2.rds.amazonaws.com:3306/test",
+    Connection con = DriverManager.getConnection("jdbc:mysql://my-database-1.crlduthczfed.ap-south-1.rds.amazonaws.com:3306/test",
             "nilesh", "nilesh12345");
     Statement st = con.createStatement();
     int i = st.executeUpdate("insert into USER(first_name, last_name, email, username, password, regdate) values ('" + firstName + "','" 
